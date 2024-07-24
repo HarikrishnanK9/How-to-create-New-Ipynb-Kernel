@@ -1,0 +1,41 @@
+Method1(create a new ipynb kernel in local or home)
+------------------------------------------------------
+
+Step 1: Activate the Environment
+conda activate finetune_env
+Step 2: Install ipykernel in the Environment
+pip install ipykernel
+Step 3: Create the Kernel for Jupyter
+python -m ipykernel install --user --name=finetune_env --display-name "Python (finetune_env)"
+Step 4: Start Jupyter Notebook
+jupyter notebook
+
+
+
+
+
+Method2(set a new ipynb kernel in existing environment)
+---------------------------------------------------------
+
+Step 1: Activate the Environment
+conda activate finetune_env
+
+
+Step 2: Install ipykernel in the Environment
+pip install ipykernel
+
+
+Step 3: Register the Kernel
+python -m ipykernel install --prefix=$CONDA_PREFIX --name=finetune_env --display-name "Python (finetune_env)"
+
+
+Step 4: Verify Kernel Installation
+jupyter kernelspec list
+
+You should see finetune_env listed with the correct path, something like:
+
+finetune_env    /path/to/your/conda/envs/finetune_env/share/jupyter/kernels/finetune_env
+
+
+Step 5: Start Jupyter Notebook
+jupyter notebook
